@@ -1,0 +1,29 @@
+{
+  "name": "json-config",
+  "version": "1.0.0",
+  "description": "Utility for parsing JSON config values",
+  "main": "json-config.js",
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-preset-env": "^1.7.0",
+    "jasmine": "^3.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "babel": "babel --presets env json-config.js -o lib/json-config.js",
+    "build": "babel json-config.js -d lib",
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valcas/json-config.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valcas/json-config/issues"
+  },
+  "homepage": "https://github.com/valcas/json-config#readme"
+}

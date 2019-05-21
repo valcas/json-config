@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>var exports = {};</script>
+        <script src="lib/json-config.js"></script>
+    </head>
+</html>
+<script>
+
+var testJSON = {
+    invoice_no:5,
+    customer:{
+        firstname:'Joe',
+        lastname:'Bloggs'
+    },
+    items: [
+        {code:1202, type:'shoes', colours:[
+            {colour:'red', stock:2},
+            {colour:'blue', stock:3},
+            {colour:'green', stock:4},
+        ]},
+        {code:32332, type:'shirt'},
+        {code:1203, type:'shoes'},
+        {code:3923, type:'socks'},
+    ]
+};
+
+var cfg = new JsonConfig(testJSON);
+
+console.log(cfg.getValue('customer/firstname', 'Jimmy'));
+console.log(cfg.getValue('customer/firstname1', 'Jimmy'));
+console.log(cfg.getValue('customer', 'Jimmy'));
+console.log(cfg.getValue('', 'Jimmy'));
+console.log(cfg.getValue(null, 'Jimmy'));
+
+console.log('search...');
+console.log(cfg.getElement('items/code[type=shoes]', 'none found'));
+console.log(cfg.getElement('items/code[type=shoes]/colours/[colour=red]', 5));
+
+</script>
