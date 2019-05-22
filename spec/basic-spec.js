@@ -4,23 +4,7 @@ const fs = require('fs');
 describe("A suite", function() {
     it("contains spec with an expectation", function() {
       
-        var testJSON = {
-          invoice_no:5,
-          customer:{
-              firstname:'Joe',
-              lastname:'Bloggs'
-          },
-          items: [
-              {code:1202, type:'shoes', colours:[
-                  {colour:'red', stock:2},
-                  {colour:'blue', stock:3},
-                  {colour:'green', stock:4},
-              ]},
-              {code:32332, type:'shirt'},
-              {code:1203, type:'shoes'},
-              {code:3923, type:'socks'},
-          ]
-      };
+      var testJSON = JSON.parse((fs.readFileSync('./spec/testfiles/basic.json','utf-8')));
       
       var cfg = new JsonConfig(testJSON);
 

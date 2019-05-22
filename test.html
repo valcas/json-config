@@ -33,7 +33,7 @@ console.log(cfg.getValue('', 'Jimmy'));
 console.log(cfg.getValue(null, 'Jimmy'));
 
 console.log('search...');
-console.log(cfg.getElement('items/code[type=shoes]', 'none found'));
-console.log(cfg.getElement('items/code[type=shoes]/colours/[colour=red]', 5));
+console.log(cfg.getValue('items/code[type=shoes]', 'none found'));
+console.log(cfg.getValue('items/code[type=shoes]/colours/[colour=red]', 5));
 
 </script>

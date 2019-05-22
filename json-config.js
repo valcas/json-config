@@ -7,7 +7,7 @@ export default class JsonConfig {
 
     getValue(path, defaultValue)    {
 
-        if ( ! path)    {
+        if (( ! path) || (! this.json))    {
             return defaultValue;
         }
 
