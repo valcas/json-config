@@ -33,3 +33,6 @@ example...
       value = cfg.getValue('customer', 'Jimmy');                                // customer object
       value = cfg.getValue('items/code[type=shoes]', 'none found');             // 2 element array
       value = cfg.getValue('items/code[type=shoes]/colours/[colour=red]', 5);   // 1 element array
+
+      let indexes = cfg.getIndex(testJSON.items, 'items/code[type=shoes]');     // Returns an array of results
+      // [{index:0, node:?}, {index:2, node:?}]

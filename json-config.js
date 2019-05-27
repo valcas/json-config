@@ -4,6 +4,23 @@ export default class JsonConfig {
         this.json = json;
         this.usedefault = {usedefault:true};
     }
+    
+    getIndex(parent, path)    {
+        
+        var nodes = this.getValue(path);
+        var result = [];
+        
+        parent.map((item, index) => {
+            nodes.map(node => {
+                if (item == node) {
+                    result.push({index:index, node:node});
+                }
+            });
+        });
+
+        return result;
+
+    }
 
     getValue(path, defaultValue)    {
 
