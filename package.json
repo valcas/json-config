@@ -1,6 +1,6 @@
 {
   "name": "json-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility for parsing JSON config values",
   "main": "json-config.js",
   "dependencies": {
