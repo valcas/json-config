@@ -2,7 +2,7 @@
   "name": "json-config",
   "version": "1.0.1",
   "description": "Utility for parsing JSON config values",
-  "main": "dist/json-config.js",
+  "main": "json-config.js",
   "dependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
@@ -10,14 +10,10 @@
     "babel-preset-env": "^1.7.0",
     "jasmine": "^3.4.0"
   },
-  "devDependencies": {
-    "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.3"
-  },
+  "devDependencies": {},
   "scripts": {
     "babel": "babel --presets env src/json-config.js -o json-config.js",
     "build": "babel src/json-config.js -d .",
-    "buildw": "webpack",
     "test": "jasmine"
   },
   "repository": {
