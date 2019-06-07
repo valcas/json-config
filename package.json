@@ -3,7 +3,8 @@
   "version": "1.0.1",
   "description": "Utility for parsing JSON config values",
   "main": "dist/json-config.js",
-  "dependencies": {
+  "module": "src/json-config.js",
+    "dependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
