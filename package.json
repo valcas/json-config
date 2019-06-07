@@ -12,8 +12,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "babel": "babel --presets env json-config.js -o lib/json-config.js",
-    "build": "babel json-config.js -d lib",
+    "babel": "babel --presets env src/json-config.js -o json-config.js",
+    "build": "babel src/json-config.js -d .",
     "test": "jasmine"
   },
   "repository": {

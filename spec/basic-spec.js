@@ -1,8 +1,8 @@
-const JsonConfig = require('../lib/json-config.js').default;
+const JsonConfig = require('../json-config.js').default;
 const fs = require('fs');
 
-describe("A suite", function() {
-    it("contains spec with an expectation", function() {
+describe("Basic Tests", function() {
+    it("basic lookups through hierarchy", function() {
       
       var testJSON = JSON.parse((fs.readFileSync('./spec/testfiles/basic.json','utf-8')));
       
