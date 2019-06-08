@@ -3,9 +3,10 @@ const path = require('path');
 module.exports = {
     entry: './src/json-config.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'lib'),
         filename: 'json-config.js',
-        library: 'JsonConfig'
+        library: 'JsonConfig',
+        libraryTarget: 'umd'
     },
     externals: {
         lodash: {
