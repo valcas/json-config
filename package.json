@@ -2,7 +2,7 @@
   "name": "json-config",
   "version": "1.0.1",
   "description": "Utility for parsing JSON config values",
-  "entry": "./index.js",
+  "entry": "./index",
   "dependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",

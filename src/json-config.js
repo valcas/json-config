@@ -1,4 +1,4 @@
-export default class JsonConfig {
+export class JsonConfig {
 
     constructor(json)   {
         this.json = json;
