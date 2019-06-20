@@ -1,1 +1,1 @@
-module.exports = require('./lib/json-config').JsonConfig;
+module.exports = require('./lib/json-config').JsonConfig; 
