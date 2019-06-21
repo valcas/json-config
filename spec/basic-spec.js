@@ -1,12 +1,14 @@
-const JsonConfig = require('../json-config.js').default;
-const fs = require('fs');
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", '../../spec/testfiles/basic.json', false ); // false for synchronous request
+xmlHttp.send( null );
+var testJSON = JSON.parse(xmlHttp.responseText);
 
 describe("Basic Tests", function() {
     it("basic lookups through hierarchy", function() {
       
-      var testJSON = JSON.parse((fs.readFileSync('./spec/testfiles/basic.json','utf-8')));
+      // var testJSON = JSON.parse((fs.readFileSync('./spec/testfiles/basic.json','utf-8')));
       
-      var cfg = new JsonConfig(testJSON);
+      var cfg = new JsonConfig.JsonConfig(testJSON);
 
       expect(cfg.getValue('customer/firstname', 'Jimmy')).toBe('Joe');
       expect(cfg.getValue('customer/invalid', 'Jimmy')).toBe('Jimmy');

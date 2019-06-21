@@ -83,4 +83,24 @@ export class JsonConfig {
 
     }
 
+    setValue(path, value)   {
+
+        var pathElements = path.split('/');
+        var searchPath = pathElements[0];
+        this.json = this.json ? this.json : {};
+        var tempValue = this.json;
+        
+        for (let i = 0; i < pathElements.length; i++)   {
+            var parent = tempValue;
+            tempValue = this.getItem(tempValue, [pathElements[i]]);
+            if (tempValue == null)  {
+                tempValue = parent[pathElements[i]] = {};
+            }
+            if ((i + 1) == pathElements.length)   {
+                parent[pathElements[i]] = value;
+            }
+        }
+
+    }
+
 }

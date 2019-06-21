@@ -1,11 +1,12 @@
-const JsonConfig = require('../json-config.js').default;
-const fs = require('fs');
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", '../../spec/testfiles/basic.json', false ); // false for synchronous request
+xmlHttp.send( null );
+var testJSON = JSON.parse(xmlHttp.responseText);
 
 describe("Null Tests", function() {
     it("check there's no issues where the json has not been specified", function() {
         
-        var testJSON = JSON.parse((fs.readFileSync('./spec/testfiles/basic.json','utf-8')));
-        var cfg = new JsonConfig();
+        var cfg = new JsonConfig.JsonConfig();
 
         expect(cfg.getValue('customer/firstname', 'Jimmy')).toBe('Jimmy');
 
