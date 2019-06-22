@@ -36,3 +36,8 @@ example...
 
       let indexes = cfg.getIndex(testJSON.items, 'items/code[type=shoes]');     // Returns an array of results
       // [{index:0, node:?}, {index:2, node:?}]
+
+Setting a value
+
+    cfg.setValue('customer/address/streetname', '11 Bleeker Street');
+    value = cfg.getValue('customer/address/streetname', '11 Bleeker Street');   // '11 Bleeker Street'
